@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:real_estate_mobileapp/tools/house_class.dart';
 
-class HouseDetails extends StatelessWidget {
+class VillaDetails extends StatelessWidget {
   final HouseItem house;
-  const HouseDetails({Key? key, required this.house}) : super(key: key);
+  const VillaDetails({Key? key, required this.house}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     double sizeX = MediaQuery.of(context).size.width; // largeur de l'écran
     double sizeY = MediaQuery.of(context).size.height; // hauteur de l'écran
-
     return Scaffold(
       body: ListView(
         scrollDirection: Axis.vertical,
@@ -31,7 +30,7 @@ class HouseDetails extends StatelessWidget {
                   width: sizeX * 0.92,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(15.0)),
-                    color: Colors.lightBlueAccent.withOpacity(0.1),
+                    color: Colors.lightBlueAccent.withOpacity(0.25),
                   ),
                 ),
                 GestureDetector(
@@ -69,9 +68,8 @@ class HouseDetails extends StatelessWidget {
                     house.name,
                     style: TextStyle(
                         color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20.0,
-                        fontFamily: 'Open Sans',
+                        fontWeight: FontWeight.w400,
+                        fontSize: 20.0
                     ),
                   ),
                 ),
@@ -82,8 +80,7 @@ class HouseDetails extends StatelessWidget {
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w300,
-                        fontSize: 15.0,
-                        fontFamily: 'Open Sans',
+                        fontSize: 15.0
                     ),
                   ),
                 ),
@@ -100,7 +97,7 @@ class HouseDetails extends StatelessWidget {
                                 color: Colors.grey.withOpacity(0.4),
                                 borderRadius: BorderRadius.all(Radius.circular(5.0)),
                               ),
-                            child: Icon(Icons.bed_sharp, color: Colors.white,)
+                              child: Icon(Icons.bed_sharp, color: Colors.white,)
                           ),
                           SizedBox(width: 5.0,),
                           Text('${house.nBed} Bedrooms',
@@ -108,7 +105,6 @@ class HouseDetails extends StatelessWidget {
                               fontWeight: FontWeight.w200,
                               fontSize: 13.0,
                               color: Colors.white,
-                              fontFamily: 'Open Sans',
                             ),
                           ),
                         ],
@@ -132,7 +128,6 @@ class HouseDetails extends StatelessWidget {
                               fontWeight: FontWeight.w300,
                               fontSize: 13.0,
                               color: Colors.white,
-                              fontFamily: 'Open Sans',
                             ),
                           ),
                         ],
@@ -149,36 +144,33 @@ class HouseDetails extends StatelessWidget {
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20.0,
-                fontFamily: 'Open Sans',
               ),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 13.0, top: 15.0, right: 13.0),
-            child: RichText(
-              textAlign: TextAlign.justify,
-              text: TextSpan(
-                children: <TextSpan>[
-                  TextSpan(
-                      text: house.description,
-                      style: TextStyle(
-                        fontSize: 13.0,
-                        fontWeight: FontWeight.w300,
-                        color: Colors.black,
-                        fontFamily: 'Open Sans',
-                      )
-                  ),
-                  TextSpan(
-                      text: ' Show More',
-                      style: TextStyle(
-                        fontSize: 14.0,
-                        color: Colors.lightBlueAccent,
-                        fontFamily: 'Open Sans',
-                      )
-                  ),
-                ]
-              ),
-            )
+              padding: const EdgeInsets.only(left: 13.0, top: 15.0, right: 13.0),
+              child: RichText(
+                textAlign: TextAlign.justify,
+                text: TextSpan(
+                    children: <TextSpan>[
+                      TextSpan(
+                          text: house.description,
+                          style: TextStyle(
+                            fontSize: 13.0,
+                            fontWeight: FontWeight.w300,
+                            color: Colors.black,
+                          )
+                      ),
+                      TextSpan(
+                          text: ' Show More',
+                          style: TextStyle(
+                            fontSize: 14.0,
+                            color: Colors.lightBlueAccent,
+                          )
+                      ),
+                    ]
+                ),
+              )
           ),
           Padding(
             padding: const EdgeInsets.only(left: 13.0, top: 15.0, right: 13.0),
@@ -203,14 +195,12 @@ class HouseDetails extends StatelessWidget {
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 18.0,
-                            fontFamily: 'Open Sans',
                           ),
                         ),
                         Text('Owner',
                           style: TextStyle(
                             fontWeight: FontWeight.w300,
                             fontSize: 15.0,
-                            fontFamily: 'Open Sans',
                           ),
                         )
                       ],
@@ -249,7 +239,6 @@ class HouseDetails extends StatelessWidget {
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20.0,
-                fontFamily: 'Open Sans',
               ),
             ),
           ),
@@ -300,8 +289,8 @@ class HouseDetails extends StatelessWidget {
                       height: sizeX * 0.2,
                       width: sizeX * 0.2,
                       decoration: BoxDecoration(
-                          color: Colors.lightBlueAccent.withOpacity(0.3),
-                          borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                        color: Colors.lightBlueAccent.withOpacity(0.3),
+                        borderRadius: BorderRadius.all(Radius.circular(15.0)),
                       ),
                     ),
                     Container(
@@ -316,7 +305,6 @@ class HouseDetails extends StatelessWidget {
                             fontSize: 17.0,
                             fontWeight: FontWeight.w400,
                             color: Colors.white,
-                            fontFamily: 'Open Sans',
                           ),
                         ),
                       ),
@@ -343,18 +331,16 @@ class HouseDetails extends StatelessWidget {
               style: TextStyle(
                 fontWeight: FontWeight.w300,
                 fontSize: 15.0,
-                fontFamily: 'Open Sans',
               ),
             ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Text('Rp ${house.price}/Year',
+              Text('Rp ${house.price}/Month',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 17.0,
-                  fontFamily: 'Open Sans',
                 ),
               ),
               ElevatedButton(onPressed: null,
@@ -363,7 +349,6 @@ class HouseDetails extends StatelessWidget {
                     fontSize: 18.0,
                     fontWeight: FontWeight.bold,
                     color: Colors.white70,
-                    fontFamily: 'Open Sans',
                   ),
                 ),
                 style: ButtonStyle(

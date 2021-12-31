@@ -50,6 +50,8 @@ class _RootState extends State<Root> {
                 title: Text('Home',
                   style: TextStyle(
                     color: Colors.lightBlueAccent,
+                    fontFamily: 'Open Sans',
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
@@ -63,6 +65,7 @@ class _RootState extends State<Root> {
               title: Text('Profile',
                 style: TextStyle(
                   color: Colors.white,
+                  fontFamily: 'Open Sans',
                 ),
               ),
             ),
@@ -75,6 +78,7 @@ class _RootState extends State<Root> {
               title: Text('Nearby',
                 style: TextStyle(
                   color: Colors.white,
+                  fontFamily: 'Open Sans',
                 ),
               ),
             ),
@@ -90,6 +94,7 @@ class _RootState extends State<Root> {
               title: Text('Bookmark',
                 style: TextStyle(
                   color: Colors.white,
+                  fontFamily: 'Open Sans',
                 ),
               ),
             ),
@@ -115,6 +120,7 @@ class _RootState extends State<Root> {
               title: Text('Notification',
                 style: TextStyle(
                   color: Colors.white,
+                  fontFamily: 'Open Sans',
                 ),
               ),
             ),
@@ -140,6 +146,7 @@ class _RootState extends State<Root> {
               title: Text('Message',
                 style: TextStyle(
                   color: Colors.white,
+                  fontFamily: 'Open Sans',
                 ),
               ),
             ),
@@ -155,6 +162,7 @@ class _RootState extends State<Root> {
               title: Text('Setting',
                 style: TextStyle(
                   color: Colors.white,
+                  fontFamily: 'Open Sans',
                 ),
               ),
             ),
@@ -167,6 +175,7 @@ class _RootState extends State<Root> {
               title: Text('Help',
                 style: TextStyle(
                   color: Colors.white,
+                  fontFamily: 'Open Sans',
                 ),
               ),
             ),
@@ -179,6 +188,7 @@ class _RootState extends State<Root> {
               title: Text('Logout',
                 style: TextStyle(
                   color: Colors.white,
+                  fontFamily: 'Open Sans',
                 ),
               ),
             ),
@@ -196,6 +206,7 @@ class _RootState extends State<Root> {
     String dropdownValue = 'Jakarta';
     var items = [
       'Jakarta',
+      'Dubai',
       'London',
       'Paris',
       'Las Vegas',
@@ -219,6 +230,7 @@ class _RootState extends State<Root> {
                     style: TextStyle(
                       fontSize: 12.0,
                       fontWeight: FontWeight.w300,
+                      fontFamily: 'Open Sans',
                     ),
                   ),
                   DropdownButton(
@@ -323,6 +335,7 @@ class _RootState extends State<Root> {
                           style: TextStyle(
                             fontWeight: activeTab == index ? FontWeight.bold : FontWeight.w200,
                             color: activeTab == index ? Colors.white : Colors.black,
+                            fontFamily: 'Open Sans',
                           ),
                         ),
                       ),

@@ -23,14 +23,16 @@ class _HouseState extends State<House> {
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20.0,
+                  fontFamily: 'Open Sans',
                 ),
               ),
               GestureDetector(
                 onTap: null,
                 child: Text('See more',
                   style: TextStyle(
-                    fontWeight: FontWeight.w200,
+                    fontWeight: FontWeight.w100,
                     fontSize: 15.0,
+                    fontFamily: 'Open Sans',
                   ),
                 ),
               ),
@@ -46,7 +48,7 @@ class _HouseState extends State<House> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 13.0, right: 8.0, top: 10.0, bottom: 10.0),
+          padding: const EdgeInsets.only(left: 13.0, right: 8.0, top: 20.0, bottom: 10.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -54,6 +56,7 @@ class _HouseState extends State<House> {
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20.0,
+                  fontFamily: 'Open Sans',
                 ),
               ),
               GestureDetector(
@@ -62,6 +65,7 @@ class _HouseState extends State<House> {
                   style: TextStyle(
                     fontWeight: FontWeight.w200,
                     fontSize: 15.0,
+                    fontFamily: 'Open Sans',
                   ),
                 ),
               ),
@@ -113,7 +117,7 @@ class HouseCard extends StatelessWidget {
             width: sizeX * 0.7,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(15.0)),
-              color: Colors.lightBlueAccent.withOpacity(0.25),
+              color: Colors.lightBlueAccent.withOpacity(0.1),
             ),
           ),
           Container(
@@ -134,6 +138,7 @@ class HouseCard extends StatelessWidget {
                     style: TextStyle(
                       fontWeight: FontWeight.w200,
                       color:  Colors.white,
+                      fontFamily: 'Open Sans',
                     ),
                   ),
                 ],
@@ -146,8 +151,9 @@ class HouseCard extends StatelessWidget {
               house.name,
               style: TextStyle(
                   color: Colors.white,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 20.0
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20.0,
+                fontFamily: 'Open Sans',
               ),
             ),
           ),
@@ -158,7 +164,8 @@ class HouseCard extends StatelessWidget {
               style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w300,
-                  fontSize: 15.0
+                  fontSize: 15.0,
+                fontFamily: 'Open Sans',
               ),
             ),
           ),
@@ -205,6 +212,7 @@ class BestHouse extends StatelessWidget {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16.0,
+                      fontFamily: 'Open Sans',
                     ),
                   ),
                 ),
@@ -214,6 +222,7 @@ class BestHouse extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.lightBlueAccent,
                       fontSize: 14.0,
+                      fontFamily: 'Open Sans',
                     ),
                   ),
                 ),
@@ -229,6 +238,7 @@ class BestHouse extends StatelessWidget {
                             style: TextStyle(
                               fontWeight: FontWeight.w200,
                               fontSize: 14.0,
+                              fontFamily: 'Open Sans',
                             ),
                           ),
                         ],
@@ -243,6 +253,7 @@ class BestHouse extends StatelessWidget {
                             style: TextStyle(
                               fontWeight: FontWeight.w200,
                               fontSize: 14.0,
+                              fontFamily: 'Open Sans',
                             ),
                           ),
                         ],
